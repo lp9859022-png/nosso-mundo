@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Para Milena</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="hero" id="hero">
+    <div class="screen-noise"></div>
+    <div class="scanlines"></div>
+
+    <div class="bg-grid"></div>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <div class="moon"></div>
+
+    <div class="stars-layer" aria-hidden="true"></div>
+    <div class="particles-layer" id="particlesLayer" aria-hidden="true"></div>
+    <div class="flowers-layer" id="flowersLayer" aria-hidden="true"></div>
+
+    <button class="sound-toggle" id="soundToggle" type="button">
+      <span class="sound-icon">♪</span>
+      <span id="soundText">som off</span>
+    </button>
+
+    <header class="top-ui">
+      <div class="ui-chip">MILENA LINK</div>
+      <div class="ui-line"></div>
+      <div class="ui-status">
+        <span class="dot"></span>
+        <span id="uiClock">online</span>
+      </div>
+    </header>
+
+    <section class="menu-panel" id="menuPanel">
+      <div class="panel-deco panel-deco-1"></div>
+      <div class="panel-deco panel-deco-2"></div>
+      <div class="panel-shine"></div>
+
+      <div class="boot-tag">
+        <span>BLUE MOON SYSTEM</span>
+        <span>LOVE MODE</span>
+      </div>
+
+      <p class="small-label">um lugar feito só pra você</p>
+
+      <h1 class="title-glitch" data-text="Para Milena">
+        <span>Para</span>
+        <span>Milena</span>
+      </h1>
+
+      <p
+        class="intro-text"
+        id="typingText"
+        data-text="Fiz esse cantinho como um pequeno mundo nosso, pra guardar mensagens, memórias, músicas, surpresas e várias coisinhas que mostrem o quanto eu amo você."
+      ></p>
+
+      <nav class="menu-list">
+        <button class="menu-btn primary" id="enterBtn">
+          <span class="menu-index">01</span>
+          <span class="menu-name">Entrar</span>
+          <span class="menu-arrow">→</span>
+        </button>
+
+        <button class="menu-btn" data-section-shortcut="cartinhas">
+          <span class="menu-index">02</span>
+          <span class="menu-name">Cartinhas</span>
+          <span class="menu-arrow">+</span>
+        </button>
+
+        <button class="menu-btn" data-section-shortcut="memorias">
+          <span class="menu-index">03</span>
+          <span class="menu-name">Memórias</span>
+          <span class="menu-arrow">+</span>
+        </button>
+
+        <button class="menu-btn" data-section-shortcut="playlist">
+          <span class="menu-index">04</span>
+          <span class="menu-name">Playlist</span>
+          <span class="menu-arrow">+</span>
+        </button>
+      </nav>
+
+      <div class="bottom-note">
+        <span class="note-line"></span>
+        <span class="note-text">feito com carinho</span>
+      </div>
+    </section>
+
+    <section class="world-screen hidden" id="worldScreen">
+      <div class="world-header">
+        <button class="back-btn" id="backBtn" type="button">← voltar</button>
+
+        <div>
+          <p class="small-label">bem-vinda ao</p>
+          <h2>Mundo da Milena</h2>
+        </div>
+      </div>
+
+      <p class="world-intro">
+        Escolhi separar esse lugar em pequenas partes, cada uma guardando um pedacinho
+        do que eu sinto, lembro e quero viver com você.
+      </p>
+
+      <div class="world-grid">
+        <button class="world-card" data-section="cartinhas">
+          <span class="card-number">01</span>
+          <strong>Cartinhas</strong>
+          <p>mensagens pra você abrir quando quiser</p>
+        </button>
+
+        <button class="world-card" data-section="memorias">
+          <span class="card-number">02</span>
+          <strong>Memórias</strong>
+          <p>lugares, momentos e lembranças nossas</p>
+        </button>
+
+        <button class="world-card" data-section="playlist">
+          <span class="card-number">03</span>
+          <strong>Playlist</strong>
+          <p>músicas que me fazem pensar em você</p>
+        </button>
+
+        <button class="world-card" data-section="motivos">
+          <span class="card-number">04</span>
+          <strong>Motivos</strong>
+          <p>pequenas razões pelas quais eu amo você</p>
+        </button>
+
+        <button class="world-card surprise locked" data-section="surpresa" id="surpriseCard">
+          <span class="card-number">05</span>
+          <strong>Surpresa final</strong>
+          <p id="surpriseText">abra as outras partes primeiro</p>
+        </button>
+      </div>
+    </section>
+
+    <section class="letters-screen hidden cosmic-letters" id="lettersScreen">
+      <button class="back-btn letters-back" id="lettersBackBtn" type="button">
+        ← voltar
+      </button>
+
+      <div class="letters-sky cosmic-sky">
+        <div class="cosmic-orbit orbit-1"></div>
+        <div class="cosmic-orbit orbit-2"></div>
+        <div class="cosmic-orbit orbit-3"></div>
+
+        <div class="comet comet-1"></div>
+        <div class="comet comet-2"></div>
+
+        <div class="storybook-planet">
+          <div class="planet-ring"></div>
+
+          <div class="rose-dome">
+            <div class="tiny-rose"></div>
+          </div>
+
+          <div class="tiny-volcano volcano-1"></div>
+          <div class="tiny-volcano volcano-2"></div>
+          <div class="planet-shadow"></div>
+        </div>
+
+        <div class="tiny-traveler">
+          <div class="traveler-head"></div>
+          <div class="traveler-body"></div>
+          <div class="traveler-scarf"></div>
+        </div>
+
+        <div class="cosmic-star cs-1">✦</div>
+        <div class="cosmic-star cs-2">✧</div>
+        <div class="cosmic-star cs-3">✦</div>
+        <div class="cosmic-star cs-4">✧</div>
+        <div class="cosmic-star cs-5">✦</div>
+
+        <div class="cosmic-caption">
+          cada carta é uma estrela guardada pra você
+        </div>
+      </div>
+
+      <div class="letters-content">
+        <p class="small-label">constelação de cartas</p>
+        <h2>Cartinhas para Milena</h2>
+
+        <p class="letters-intro">
+          Aqui ficam minhas cartinhas como pequenos planetas. Cada uma guarda
+          uma parte do que eu sinto por você, como estrelas que continuam brilhando
+          mesmo de longe.
+        </p>
+
+        <div class="letters-grid" id="lettersGrid"></div>
+      </div>
+    </section>
+
+    <section class="memories-screen hidden garden-memories" id="memoriesScreen">
+      <button class="back-btn memories-back" id="memoriesBackBtn" type="button">
+        ← voltar
+      </button>
+
+      <div class="memories-garden-hero">
+        <div class="garden-glow"></div>
+        <div class="garden-moon"></div>
+
+        <div class="rose rose-1"></div>
+        <div class="rose rose-2"></div>
+        <div class="rose rose-3"></div>
+        <div class="rose rose-4"></div>
+
+        <div class="petal petal-1"></div>
+        <div class="petal petal-2"></div>
+        <div class="petal petal-3"></div>
+        <div class="petal petal-4"></div>
+        <div class="petal petal-5"></div>
+        <div class="petal petal-6"></div>
+
+        <div class="garden-title-badge">
+          nossas flores, nossas memórias
+        </div>
+      </div>
+
+      <div class="memories-content">
+        <p class="small-label">jardim de lembranças</p>
+        <h2>Memórias com Milena</h2>
+
+        <p class="memories-intro">
+          Aqui, cada flor representa uma lembrança nossa. Algumas são pequenas,
+          outras marcam mais fundo, mas todas florescem como parte da nossa história.
+        </p>
+
+        <div class="memories-garden-grid" id="memoriesGardenGrid"></div>
+      </div>
+    </section>
+
+    <section class="playlist-screen hidden vintage-playlist" id="playlistScreen">
+      <button class="back-btn playlist-back" id="playlistBackBtn" type="button">
+        ← voltar
+      </button>
+
+      <div class="playlist-visual">
+        <div class="vinyl-area vintage-machine">
+          <div class="gear gear-1"></div>
+          <div class="gear gear-2"></div>
+          <div class="gear gear-3"></div>
+
+          <div class="brass-plate">MILENA SOUND ARCHIVE</div>
+
+          <div class="vinyl-disc" id="vinylDisc">
+            <div class="vinyl-label">
+              <span>Milena</span>
+            </div>
+          </div>
+
+          <div class="needle vintage-needle"></div>
+
+          <div class="pressure-gauge">
+            <span></span>
+          </div>
+
+          <div class="steam-pipe pipe-1"></div>
+          <div class="steam-pipe pipe-2"></div>
+
+          <div class="now-playing">
+            <span>tocando agora</span>
+            <strong id="nowPlayingTitle">Escolha uma música</strong>
+            <p id="nowPlayingDesc">A música escolhida vai tocar como fundo do site.</p>
+
+            <div class="playlist-controls">
+              <button class="control-btn" id="prevTrackBtn" type="button">
+                ◀ anterior
+              </button>
+
+              <button class="control-btn mode-btn" id="modeToggleBtn" type="button">
+                modo: <span id="modeLabel">ordem</span>
+              </button>
+
+              <button class="control-btn" id="nextTrackBtn" type="button">
+                próxima ▶
+              </button>
+            </div>
+
+            <p class="mode-hint" id="modeHint">
+              quando uma música acabar, a próxima vem em ordem.
+            </p>
+          </div>
+        </div>
+
+        <div class="playlist-menu">
+          <p class="small-label">arquivo sonoro vintage</p>
+          <h2>Playlist da Milena</h2>
+
+          <p class="playlist-intro">
+            Escolha uma música para tocar no fundo enquanto navega pelo nosso cantinho.
+            Você também pode deixar em ordem ou no modo aleatório.
+          </p>
+
+          <div class="track-list" id="trackList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-panel hidden" id="detailPanel">
+      <button class="detail-close" id="detailClose" type="button">×</button>
+      <p class="small-label" id="detailLabel">seção</p>
+      <h2 id="detailTitle">Título</h2>
+      <div class="detail-content" id="detailContent"></div>
+    </section>
+
+    <div class="system-toast" id="systemToast">
+      <span id="toastText">Mensagem</span>
+    </div>
+
+    <div class="transition-screen" id="transitionScreen">
+      <div class="transition-circle"></div>
+      <p id="transitionText">abrindo o mundo da Milena...</p>
+      <div class="loading-bar">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="slash-transition" id="slashTransition">
+      <div class="slash slash-1"></div>
+      <div class="slash slash-2"></div>
+      <div class="slash slash-3"></div>
+      <div class="slash-text" id="slashText">CARTINHAS</div>
+    </div>
+
+    <div id="touchLight"></div>
+
+    <audio id="bgMusic" src="audio/musica.mp3" preload="auto"></audio>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
