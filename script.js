@@ -131,18 +131,28 @@ const sectionData = {
 };
 
 const lettersData = [
-  {
-    number: "01",
-    title: "Quando penso em você",
-    preview: "uma cartinha sobre como você virou parte dos meus dias",
-    text: `
+{
+  number: "01",
+  title: "Minha carta para você",
+  preview: "um vídeo e uma carta feita com todo meu carinho",
+  video: "videos/carta-milena.mp4",
+  text: `
 Milena,
 
-Escreve aqui a primeira cartinha completa que você fez pra ela.
+Aqui você cola a carta inteira que você escreveu pra ela.
 
-Você pode deixar o texto grande, com várias linhas, porque ele vai abrir dentro do painel quando ela tocar nessa cartinha.
-    `
-  },
+Você pode escrever várias linhas aqui.
+Tudo que estiver dentro dessas crases vai aparecer no site,
+embaixo do vídeo.
+
+Exemplo:
+
+Entre bilhões de estrelas e tantas outras flores no meu caminho,
+foi o tempo que dediquei a ti que te fez o meu maior carinho.
+
+Continua sua carta aqui...
+  `
+},
   {
     number: "02",
     title: "Pra quando estiver triste",
