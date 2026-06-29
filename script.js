@@ -135,22 +135,36 @@ const lettersData = [
   number: "01",
   title: "Minha carta para você",
   preview: "um vídeo e uma carta feita com todo meu carinho",
-  video: "videos/carta-milena.mp4",
+  video: "videos/carta-milena.mov",
   text: `
 Milena,
 
-Aqui você cola a carta inteira que você escreveu pra ela.
+Entre tantas pessoas no mundo, foi em você que o meu coração encontrou um lugar verdadeiro para ficar.
 
-Você pode escrever várias linhas aqui.
-Tudo que estiver dentro dessas crases vai aparecer no site,
-embaixo do vídeo.
+Mesmo sendo mais velho, mesmo tendo vivido mais coisas, foi contigo que eu aprendi um jeito novo de amar. Um amor mais leve, mais sincero, mais cheio de cuidado. Um amor que não se mede por idade, mas pela intensidade do que a gente sente.
 
-Exemplo:
+A distância entre nós, entre estados, entre cidades, nunca foi suficiente para diminuir o que existe aqui dentro. Pelo contrário, ela só me fez perceber o quanto você é importante pra mim. Porque mesmo longe, você está presente em tudo: nos meus pensamentos, nos meus dias, nas minhas vontades.
 
-Entre bilhões de estrelas e tantas outras flores no meu caminho,
-foi o tempo que dediquei a ti que te fez o meu maior carinho.
+Tem dias em que a saudade aperta, em que eu queria só poder te abraçar, te olhar de perto, dividir o mesmo espaço. Mas ao mesmo tempo, essa distância também me faz sonhar ainda mais com o nosso futuro.
 
-Continua sua carta aqui...
+Um futuro onde não vamos mais precisar contar quilômetros, nem esperar mensagens para matar a saudade. Um futuro onde vamos acordar juntos, dividir a rotina, rir das coisas simples e construir, lado a lado, a nossa própria história.
+
+Você se tornou alguém essencial pra mim. Não só pelo que você é, mas pelo que a gente é junto. Pelo cuidado, pelas conversas, pelos momentos que a gente cria mesmo estando longe.
+
+E é por isso que, entre tantas possibilidades, eu escolho você todos os dias.
+
+Escolho enfrentar a distância.
+
+Escolho acreditar no nosso futuro.
+
+Escolho amar você, do jeito mais verdadeiro que eu sei.
+
+Porque, no fim, não importa a idade, não importa a distância.
+
+O que importa é que é você.
+
+E sempre vai ser você.
+
   `
 },
   {
@@ -851,7 +865,7 @@ function openLetter(letter) {
     ? `
       <div class="letter-video-frame">
         <video controls playsinline preload="metadata">
-          <source src="${letter.video}" type="video/mp4">
+          <source src="${letter.video}" type="video/mov">
           Seu navegador não conseguiu abrir esse vídeo.
         </video>
       </div>
