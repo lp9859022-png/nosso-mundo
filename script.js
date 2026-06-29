@@ -864,10 +864,14 @@ function openLetter(letter) {
   const videoHTML = letter.video
     ? `
       <div class="letter-video-frame">
-        <video controls playsinline preload="metadata">
-          <source src="${letter.video}" type="video/mov">
+        <video class="letter-video" controls playsinline preload="metadata">
+          <source src="${letter.video}" type="video/mp4">
           Seu navegador não conseguiu abrir esse vídeo.
         </video>
+
+        <a class="video-open-link" href="${letter.video}" target="_blank">
+          abrir vídeo direto
+        </a>
       </div>
     `
     : "";
@@ -885,6 +889,26 @@ function openLetter(letter) {
   `;
 
   detailPanel.classList.remove("hidden");
+
+  const letterVideo = detailPanel.querySelector(".letter-video");
+
+  if (letterVideo) {
+    letterVideo.addEventListener("play", () => {
+      bgMusic.pause();
+      vinylDisc.classList.remove("playing");
+    });
+
+    letterVideo.addEventListener("pause", () => {
+      if (soundEnabled) {
+        bgMusic.play().catch(() => {});
+        vinylDisc.classList.add("playing");
+      }
+    });
+
+    letterVideo.addEventListener("error", () => {
+      showToast("O vídeo não carregou. Confere o nome e a pasta do arquivo.");
+    });
+  }
 }
 function openMemoriesScreen() {
   enableSound();
