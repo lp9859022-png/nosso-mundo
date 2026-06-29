@@ -847,15 +847,31 @@ function openLetter(letter) {
   detailLabel.textContent = `cartinha ${letter.number}`;
   detailTitle.textContent = letter.title;
 
+  const videoHTML = letter.video
+    ? `
+      <div class="letter-video-frame">
+        <video controls playsinline preload="metadata">
+          <source src="${letter.video}" type="video/mp4">
+          Seu navegador não conseguiu abrir esse vídeo.
+        </video>
+      </div>
+    `
+    : "";
+
   detailContent.innerHTML = `
-    <div class="info-card">
+    ${videoHTML}
+
+    <div class="letter-written-card">
+      <div class="letter-written-top">
+        <span>✦ carta escrita</span>
+      </div>
+
       <p>${letter.text.trim().replace(/\n/g, "<br>")}</p>
     </div>
   `;
 
   detailPanel.classList.remove("hidden");
 }
-
 function openMemoriesScreen() {
   enableSound();
 
